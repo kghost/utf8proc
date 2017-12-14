@@ -21,7 +21,9 @@ if (NOT MSVC)
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O2 -std=c99 -pedantic -Wall")
 endif ()
 
-add_library (utf8proc
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+
+add_library (utf8proc SHARED
   utf8proc.c
   utf8proc.h
 )
